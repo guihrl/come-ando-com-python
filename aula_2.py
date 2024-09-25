@@ -45,4 +45,13 @@ nomeHotel = input("qual é o nome do hotel? : ")
 estrelasHotel = float(input("Qual é a quantidade de estrelas que o hotel tem? : "))
 cidadeHotel = input("Em que cidade fica?: ")
 
-print ()
+# if estrelasHotel >= 6:
+#     print("coloque um número de 1 a 5")
+# else:
+print(f"**********************\n*********{nomeHotel}*********\n*****{estrelasHotel} estrelas*****\n********{cidadeHotel}********\n**********************")
+
+# **********************
+# *********Ibis*********
+# *****5.0 estrelas*****
+# ********Recife********
+# **********************
