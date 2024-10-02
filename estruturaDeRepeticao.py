@@ -6,7 +6,7 @@
 #Exemplo
 # frutas = ["maçã", "banana", "laranja"]
 
-# for fruta in frutas:
+#  for fruta in frutas:
 #     print(fruta)
 
 #A função reange() gera uma sequência de números, que é frequentemente utilizadas para laços for.:
@@ -27,10 +27,10 @@
 # for letra in palavra:
 #     print(letra) #Neste caso, a variável letra assume cada caractere da string palavra
 
-# #desafio
+#desafio
 # p = "Pythonnnnnn"
 
-# for i, z in enumerate(p):
+#  for i, z in enumerate(p):
 #     print(f"A letra de {z} tem indice {i}")
 
 #exemplo 4
@@ -93,14 +93,148 @@
 #     lista2.insert(0,i)
 # print(lista2)
 
-#ex 7
-
+# #ex 7
+# def encontrar_primos(n):
+#     primos = []
+#     for i in range(2, int(i))
 
 
 #ex 8
-quadradoPerfeito = int(input("Digite um número: " ))
-total = quadradoPerfeito*quadradoPerfeito
+# quadradoPerfeito = int(input("Digite um número: " ))
+# total = quadradoPerfeito*quadradoPerfeito
+# raiz = 0
+# while = raiz*raiz< quadradoPerfeito
 
 
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# A estrutura basica de um laço while
+
+# while condicao:
+
+#exemplo
+# contador = 6 #quando eu coloco o contador = 6 ele coloca numeros infinitos
+
+# while contador >= 5:
+#     print(contador)
+#     contador += 1
+    
+#Nesse exemplo, a variável contador é incrementada a cada interação
+#Quando o valor de contador é maior que 5
+#a condição do while deixa de ser verdadeira, e o laço é encerrado
+
+#exemplo
+
+# while True:
+#     nome = input("Digite seu nome (ou 'sair' para para): ")
+    
+#     if nome == "sair":
+#         break
+#     print(f"Olá, {nome}")
+    
+#Nesse exemplo o programa continuará pedinto que o usuário para digitar seu nome até que ele digite "sair".
+#O break é ultilizado para para a ação 
+
+#exemplo 
+
+# numero_secreto = 7
+# tentativa = None
+
+# while tentativa != numero_secreto:
+#     tentativa = int(input("Adivinhe o número (entre 1 e 10): "))
+    
+# print("Parabéns você acertou o numero secreto")
+
+# aqui o usuário vai ficar tentando até que acerte 
+
+#ex 20
+
+# import random
+# minhaLista= ["guilherme", "carlos","uirá", "ruan","ribamar", "marcelo"]
+# nome_secreto = random.choice(minhaLista)
+# tentativa = " "
 
 
+# while tentativa != nome_secreto:
+#     tentativa = str(input("Na minha lista tem (guilherme, carlos, uirá, ruan, ribamar, marcelo) escolha: "))
+
+# print("Parabéns você acertou o nome secreto")
+#esse eu inportei o random para eu não saber qual é o número secreto
+
+#exemplo
+# contagem = 10
+
+# while contagem > 0:
+#     print(contagem)
+#     contagem -=1
+# print("feliz ano novo")
+
+# while True:
+#     num1 = float(input("Digite o primeiro número: "))
+#     num2 = float(input("Digite o segundo número: "))
+#     operacao = input("Digite (+,-,x,/) ou 'sair' para parar: ")
+
+#     if operacao == "+":
+#         print(f"Resultado de {num1} + {num2} = {num1 + num2}")
+#     elif operacao == "-":
+#         print(f"O resultado de {num1} - {num2} = {num1 - num2}")
+#     elif operacao == "x":
+#         print(f"O resultado de {num1} x {num2} = {num1 * num2}")
+#     elif operacao == "/":
+#         if num2 != 0:
+#             print(f"O resultado de {num1} ÷ {num2} = {num1 / num2}")
+#         else:
+#             print("Erro: Divisão pro zero.")
+#     else:
+#         print("Operação inválida!")
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# contador = 1
+# while contador <= 10:
+#     print(contador)
+#     contador += 1
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# numero_secreto = 1234
+# tentativa = None
+
+# while tentativa != numero_secreto:
+#     tentativa = int(input("Adivinhe a senha com 4 digitos: "))
+
+# print("Parabéns você acertou a senha!!")
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# nunInserido = []
+# soma = 0
+# numInteiro = 0
+# tentativa = None
+# while tentativa != numInteiro:
+#     numInteiro = int(input("digite um número inteiro: "))
+#     if numInteiro == 0:
+#         print(numInteiro)
+#         print(nunInserido)
+#         print(f"A soma dos números inseridos é: {soma}")
+#         break
+#     else:
+#         nunInserido.append(numInteiro)
+#         soma += numInteiro
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# pares = 1
+
+# while pares <=40:
+#     if pares %2 == 0:
+#         print(pares)
+#     pares +=1
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+nomes = []
+tentativa = None
+while tentativa != "sair":
+    tentativa = input("Digite um nome (ou 'sair' para encerrar): ")
+    if tentativa != "sair":
+        nomes.append(tentativa)
+print(nomes)
