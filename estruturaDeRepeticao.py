@@ -231,10 +231,50 @@
 #     pares +=1
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-nomes = []
-tentativa = None
-while tentativa != "sair":
-    tentativa = input("Digite um nome (ou 'sair' para encerrar): ")
-    if tentativa != "sair":
-        nomes.append(tentativa)
-print(nomes)
+# nomes = []
+# tentativa = None
+# while tentativa != "sair":
+#     tentativa = input("Digite um nome (ou 'sair' para encerrar): ")
+#     if tentativa != "sair":
+#         nomes.append(tentativa)
+# print(nomes)
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# dic = {}
+# dic_compras = {"arroz":7.90, "feijao":8.50, "macarrão":4.50, "leite":4.80}
+
+# print(dic_compras)
+
+# dic_compras["cebola"] = 1.50
+
+# print(dic_compras)
+
+# del dic_compras["leite"]
+
+# print(dic_compras)
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+compras = []
+while True:
+    print("1 - adicionar")
+    print("2 - remover")
+    print("3 - exibir")
+    print("4 - sair")
+    print()
+    adicionar = input("Digite sua lista de compras (ou 'sair' para encerrar): ")
+    if adicionar == "1":
+        produto = input("adicione um produto na sua lista: ")
+        compras.append(produto)
+        print(compras)
+    elif adicionar == "2":
+        print(compras)
+        remover = input("Digite um item que você queira remover(quando terminar de remover digite 'parar' para encerrar)")
+        compras.remove(remover)
+        print("você removeu: ", remover)
+    elif adicionar == "3":
+        print(compras)
+    else:
+        break
+    
+print(f"Lista final: {compras}")
