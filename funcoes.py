@@ -22,7 +22,7 @@
 # resultado = somar(10,20,30)
 # print(resultado)
 
-# #Exemplo 
+# #Exemplo
 
 # def checarNumero(n):
 #     if n > 0:
@@ -68,13 +68,13 @@
 #Escopo Local: Variáveis definidas dentro de uma função só existem dentro dela.
 #Escopo Global: Variáveis definidas fora de qualquer função podem ser acessadas em qualquer parte do código.
 
-#Exemplo 
+#Exemplo
 #Argumento Posicional
 #Os argumento são passados para a função na mesma ordem dos parâmetros
 
 # def exibirNomeIdade(nome,idade):
 #     print(f"Nome: {nome} Idade: {idade}")
-    
+
 # exibirNomeIdade(guilherme, 17)
 # exibirNomeIdade(17, guilherme) # ele vai colocar Nome: 17 Idade: guilherme.
 
@@ -83,22 +83,22 @@
 
 # def exibirNomeIdade(nome,idade):
 #     print(f"Nome: {nome} Idade: {idade}")
-    
+
 # exibirNomeIdade(idade=17, nome="guilherme") #Não importa a ordem.
 
 #Argumentos Arbitrários (*args e **kwargs):
 
-# # *args: Recebe mútiplos argumentos como uma tupla.
+# *args: Recebe mútiplos argumentos como uma tupla.
 
 # def somar_todos(*args):
 #     return sum(args)
 # print(somar_todos(1, 2, 3, 4, 5))
 
-# # *kwargs: Recebe mútiplos argumentos nomeados como um dicionário.
+# *kwargs: Recebe mútiplos argumentos nomeados como um dicionário.
 # def exibir_detalhes(**kwargs):
 #     for chave, valor in kwargs.items():
 #         print(f"{chave}: {valor}")
-    
+
 # exibir_detalhes(nome = "carlos", idade = 30, cidade = "São Paulo", telefone = "819923323120")
 
 # #Função para encontrar a Soma de numéros pares usando "while"
@@ -115,32 +115,59 @@
 # print(soma_pares([1, 2, 3, 4, 5, 6]))
 
 def obter_detalhes_pedido():
-#Simula a obtenção de detalhes de um pedido
-    pedido = {
-        "item": "Notebook",
-        "preco": 1200.00,
-        "quantidade": 2
 
-    }
-    print("Detalhes do pedido obtidos.")
-    return pedido
+    """_summary_
+    alterar a forma de obter os pedidos! utilize o while e vá adicionando até o usuario dizer chega
+    
+    """
+    while True:
+        item = input()
+        preco = input()
+    
 
-def calcular_preco_total(pedido):
+
+# #Simula a obtenção de detalhes de um pedido
+    
+    
+#     pedido = {
+#         "item": "Notebook",
+#         "preco": 1200.00,
+#         "quantidade": 2
+#     }
+    
+#     pedido2 = {
+#         "item": "celular",
+#         "preco": 2000.00,
+#         "quantidade": 2
+#     }
+    
+#     print("Detalhes do pedido obtidos.")
+#     return pedido, pedido2
+
+def calcular_preco_total(pedido, pedido2):
 #Calcula o preço total do pedido
-    preco_total = pedido['preco'] * pedido['quantidade']
+    preco_total = (pedido['preco'] * pedido['quantidade']) 
+    preco_total2 = (pedido2["preco"] * pedido2["quantidade"])
+    
     print(f"Preço total calculado: R${preco_total}")
-    return preco_total
+    print(f"Preço total calculado: R${preco_total2}")
 
-def enviar_confirmacao(pedido, preco_total):
+    return preco_total, preco_total2
+
+def enviar_confirmacao(pedido, preco_total, pedido2, preco_total2):
 # Simula o envio de uma confirmação de pedido
     print(f"Confirmação enviada para {pedido['quantidade']} {pedido['item']}(s).")
     print(f"Valor total a ser pago: R${preco_total}")
+    print(f"Confirmação enviada para {pedido2['quantidade']} {pedido2['item']}(s).")
+    print(f"Valor total a ser pago: R${preco_total2}")
 
 def processar_pedido():
 #Chama as funções auxiliares para processar o pedido
-    pedido = obter_detalhes_pedido()
-    preco_total = calcular_preco_total(pedido)
-    enviar_confirmacao(pedido, preco_total)
 
+    pedido = obter_detalhes_pedido()
+    pedido1 = pedido[0]
+    pedido2 = pedido[1]    
+    preco_total = calcular_preco_total(pedido1, pedido2)
+    enviar_confirmacao(pedido1, preco_total[0],pedido2, preco_total[1])
 #Chamando a função principal
-processar_pedido = obter_detalhes_pedido()
+processar_pedido()
