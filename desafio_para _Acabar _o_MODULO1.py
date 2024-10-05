@@ -1,3 +1,18 @@
+# Crie um programa que permita ao usuário realizar as seguintes operações bancárias:
+
+# Criar conta
+# Verificar saldo
+# Depositar dinheiro
+# Sacar dinheiro
+# Encerrar o atendimento
+
+# O programa deve armazenar as informações da conta bancária do usuário em um dicionário.
+# O programa deve exibir um menu para o usuário escolher a operação que deseja realizar e, em seguida, executar a operação escolhida.
+# Ao depositar dinheiro, o programa deve atualizar o saldo da conta bancária adicionando o valor depositado ao saldo atual.
+# Ao sacar dinheiro, o programa deve verificar se o valor a ser sacado é menor ou igual ao saldo atual da conta bancária e, em caso afirmativo, atualizar o saldo da conta bancária subtraindo o valor sacado do saldo atual.
+# Se o valor a ser sacado for maior que o saldo atual da conta bancária, o programa deve exibir uma mensagem informando que não há saldo suficiente na conta bancária para realizar a operação.
+
+
 dic_informacao = {}
 saldo = 20000
 
@@ -11,29 +26,32 @@ while True:
 
         return nome, senha
 
-    def verificar_saldo():
-        
-        print(f"seu saldo é de {saldo}")
-        
-    
-    def depositar_saldo(saldo):
+    def verificar_saldo(saldo):
+        if dic_informacao == True:
+            print(f"seu saldo é de {saldo}")
+        else:
+            print("-----------------")
+            print(f"crie sua conta!!")
+            print("-----------------")
+
+    def depositar_saldo():
         adcSaldo = float(input("Digite quanto você quer depositar: "))
         saldoTotal = adcSaldo + saldo
         print(f"Seu saldo foi atualizado para {saldoTotal} ")
-    
         return saldoTotal
 
     def sacar_dinheiro():
-        global saldo
+        
         sacar = float(input("Quanto você quer sacar:  "))
-
+        
+        global saldo
         if sacar > saldo:
-            print(f"Erro. Seu saque maximo é de R$ {saldo}")
+                print(f"Erro. Seu saque maximo é de R$ {saldo}")
         else:
             saldo -= sacar
             print(f"Saque feito com sucesso!! Agora você está com R$ {saldo} ")
 
-            return saldo      
+        return saldo     
 
     print("1 - Criar Conta")
     print("2 - Verificar Saldo")
@@ -47,7 +65,7 @@ while True:
         criar_conta()
 
     elif escolha == "2":
-        verificar_saldo(saldo)
+        verificar_saldo('saldo')
 
     elif escolha == "3":
         
@@ -55,5 +73,13 @@ while True:
     
     elif escolha == "4":
         sacar_dinheiro()
-            
+    
+    else:
+        escolha = "5"
+        break
+    
+    
+#--------------------------------------------------------------------------------------------------------------
+# Problema: Dado um conjunto de notas de alunos, calcule a média e classifique como "Aprovado" ou "Reprovado" (nota mínima 7).
+
 
