@@ -27,12 +27,7 @@ while True:
         return nome, senha
 
     def verificar_saldo(saldo):
-        if dic_informacao == True:
             print(f"seu saldo é de {saldo}")
-        else:
-            print("-----------------")
-            print(f"crie sua conta!!")
-            print("-----------------")
 
     def depositar_saldo():
         adcSaldo = float(input("Digite quanto você quer depositar: "))
