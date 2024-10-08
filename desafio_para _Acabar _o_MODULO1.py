@@ -14,7 +14,7 @@
 
 
 dic_informacao = {}
-saldo = 20000
+saldo = {20000}
 
 while True:
     def criar_conta():
