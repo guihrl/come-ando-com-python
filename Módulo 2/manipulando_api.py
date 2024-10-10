@@ -20,8 +20,8 @@
 #         print("Falha ao obter dados. Status code:", response.status_code)
 
 
-import requests
-import openpyxl
+# import requests
+# import openpyxl
 
 #URL da API
 # url = "https://jsonplaceholder.typicode.com/users"
@@ -51,16 +51,20 @@ import openpyxl
 #     print("Falha ao obter dados. Status code:", response.status_code)
 
 import requests
-
+import openpyxl
 
 url = "https://loteriascaixa-api.herokuapp.com/api/lotofacil"
 response = requests.get(url)
 
 if response.status_code == 200:
-
     users = response.json()
 
+    workbook = openpyxl.Workbook()
+    sheet = workbook.active
+    
+    sheet.append(["Data", "Valor Arrecadado"])
+    
     for user in users:
-        print(f" Data: {user['data']}, Valor Arrecadado: {user['valorArrecadado']}")
+        print(f" Data: {user['data']}, Valor Arrecadado: {user['valorArrecadado']}, Acertos {user['premiacoes']}")
 
         
